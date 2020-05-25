@@ -1,7 +1,6 @@
 package km.hw72.chat.controller;
 
 import km.hw72.chat.DTO.MessageDTO;
-import km.hw72.chat.model.User;
 import km.hw72.chat.service.MessageService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -25,16 +24,8 @@ public class MainRestController {
         return messageService.getAllMessages(pageable).getContent();
     }
 
-//    @GetMapping("/{id:\\d+?}")
-//    public List<MessageDTO> getChatMessages(@PathVariable("id") int chatId) {
-//        messageService.getChatMessages(chatId).forEach(m -> System.out.println(m));
-//        return messageService.getChatMessages(chatId);
-//    }
-
     @GetMapping("/{id:\\d+?}")
     public Page<MessageDTO> getChatMessages(@PathVariable("id") int chatId, Pageable pageable) {
-//        messageService.getChatMessages(pageable, chatId).forEach(m -> System.out.println(m));
-        System.out.println(">>>>>>>" + messageService.getChatMessages(pageable, chatId).toString());
         return messageService.getChatMessages(pageable, chatId);
     }
 

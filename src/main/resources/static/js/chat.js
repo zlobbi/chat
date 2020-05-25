@@ -33,7 +33,7 @@ window.onload = function() {
     async function loadNextMessage() {
         const data = await fetchPlaces(pageCounter);
 
-        if (data.content.length === 0) {
+        if (data.content.length === 0 || pageCounter === 20) {
             setPulling(3000)
             return;
         }
