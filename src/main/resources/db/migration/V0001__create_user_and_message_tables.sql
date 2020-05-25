@@ -34,6 +34,7 @@ insert into `users` (name, session)
 values ('third_user', 'first_session');
 
 insert into `chats` (name, time) value ('first_chat', CAST('2019-06-18 11:35:09.000' as DateTime));
+insert into `chats` (name, time) value ('second_chat', CAST('2019-06-18 11:35:09.000' as DateTime));
 
 insert into `messages` (text, time, user_id, chat_id)
 values ('first_message', CAST('2019-08-18 13:35:09.000' as DateTime), 1, 1);

@@ -33,7 +33,8 @@ public class MainRestController {
 
     @GetMapping("/{id:\\d+?}")
     public Page<MessageDTO> getChatMessages(@PathVariable("id") int chatId, Pageable pageable) {
-        messageService.getChatMessages(pageable, chatId).forEach(m -> System.out.println(m));
+//        messageService.getChatMessages(pageable, chatId).forEach(m -> System.out.println(m));
+        System.out.println(">>>>>>>" + messageService.getChatMessages(pageable, chatId).toString());
         return messageService.getChatMessages(pageable, chatId);
     }
 

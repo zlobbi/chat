@@ -11,7 +11,6 @@
             <div id="messages" class="col-12 overflow-auto" style="max-height: 300px; min-height: 200px">
 
             </div>
-            <#include "partials/pagination.ftlh">
             <div class="bg-dark col-12 text-light mt-4 p-2 text-center text-upercease navbar-brand">
                 <a class="btn-su px-2 m-1" id="chatting">chatting</a>
             </div>

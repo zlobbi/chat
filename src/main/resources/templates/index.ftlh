@@ -14,7 +14,7 @@
                     </thead>
                     <#items as ch>
                         <tbody>
-                        <tr onclick="location.href='/chat/${ch.id}'" style="cursor: pointer;">
+                        <tr onclick="location.href='/chat/${ch.id}?page=1'" style="cursor: pointer;">
                             <td>${ch.name}</td>
                             <td>${ch.time}</td>
                         </tr>
